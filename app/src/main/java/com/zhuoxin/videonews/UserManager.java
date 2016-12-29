@@ -21,6 +21,23 @@ public class UserManager {
 
     private String username;
     private String objectId;
+    private boolean isPlay;
+
+    public static UserManager getsInstance() {
+        return sInstance;
+    }
+
+    public static void setsInstance(UserManager sInstance) {
+        UserManager.sInstance = sInstance;
+    }
+
+    public boolean isPlay() {
+        return isPlay;
+    }
+
+    public void setPlay(boolean play) {
+        isPlay = play;
+    }
 
     public String getUsername() {
         return username;

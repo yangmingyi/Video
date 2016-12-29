@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.zhuoxin.videonews.R;
+import com.zhuoxin.videonews.UserManager;
 import com.zhuoxin.videonews.bombapi.entity.NewsEntity;
 import com.zhuoxin.videonews.commons.CommonUtils;
 import com.zhuoxin.videonews.ui.base.BaseItemView;
@@ -104,6 +105,7 @@ public class NewsItemView
     @OnClick(R.id.textureView)
     public void stopPlayer() {
         mediaPlayerManager.stopPlayer();
+        UserManager.getsInstance().setPlay(false);
     }
 
     // 判断是否操作当前的视频
